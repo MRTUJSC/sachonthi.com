@@ -182,11 +182,11 @@ function displayToc(filter) {
 // this function creates a three-column table and adds it to the screen
    var numDisplayed = 0;
    var tocTable = '';
-   var tocHead1 = 'POST TITLE';
-   var tocTool1 = 'Click to sort by title';
-   var tocHead2 = 'POST DATE';
+   var tocHead1 = 'TÊN BÀI ĐĂNG';
+   var tocTool1 = 'Click vào lựa chọn bài đăng có nhãn;
+   var tocHead2 = 'NGÀY ĐĂNG';
    var tocTool2 = 'Click to sort by date';
-   var tocHead3 = 'LABELS';
+   var tocHead3 = 'DANH MỤC';
    var tocTool3 = '';
    if (sortBy == "titleasc") { 
       tocTool1 += ' (descending)';
@@ -233,7 +233,7 @@ function displayToc(filter) {
    }
    tocTable += '</table>';
    if (numDisplayed == postTitle.length) {
-      var tocNote = '<span class="toc-note">Displaying all ' + postTitle.length + ' posts<br/></span>'; }
+      var tocNote = '<span class="toc-note">Hiển thị tất cả ' + postTitle.length + ' bài đăng<br/></span>'; }
    else {
       var tocNote = '<span class="toc-note">Displaying ' + numDisplayed + ' posts labeled \'';
       tocNote += postFilter + '\' of '+ postTitle.length + ' posts total<br/></span>';
@@ -269,5 +269,5 @@ function hideToc() {
   var tocdiv = document.getElementById("toc");
   tocdiv.innerHTML = '';
   var toclink = document.getElementById("toclink");
-  toclink.innerHTML = '<a href="#" onclick="scroll(0,0); showToc(); Effect.toggle('+"'toc-result','blind');"+'">� Show Table of Contents</a> <img src="https://1.bp.blogspot.com/-MMsDm64XZtM/VzQD8tvFJ-I/AAAAAAAAXhk/L2JgChUq2_w0vZHuPhaPGp_xGuA_YDaKQCLcB/s1600/new_1.gif"/>';
+  toclink.innerHTML = '<a href="#" onclick="scroll(0,0); showToc(); Effect.toggle('+"'toc-result','blind');"+'">» Show Table of Contents</a> <img src="https://1.bp.blogspot.com/-MMsDm64XZtM/VzQD8tvFJ-I/AAAAAAAAXhk/L2JgChUq2_w0vZHuPhaPGp_xGuA_YDaKQCLcB/s1600/new_1.gif"/>';
 }
